@@ -1,0 +1,103 @@
+        @font-face {
+  font-family: 'UnifrakturCook';
+  src: url('UnifrakturCook-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.section-sand .colonne {
+  font-family: 'UnifrakturCook', cursive;
+  text-align: center
+}
+        body {
+            margin: 0;
+            /* PARTIE MODIFIÉE : correction de la propriété */
+            min-height: 100vh; /* au lieu de nin-height */
+            background: linear-gradient(to right, #ff7300 0%, #FFA500, #ff0000 100%);
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            text-align: right;
+        }
+        .image-container img {
+            display: inline-block;
+            width: 50%;
+            height: auto;
+        }
+        .image-text {
+            position: absolute;
+            top: 35%;         /* Place le texte à peu près au centre verticalement */
+            left: 5%;         /* Place le texte vers la gauche, ajuste si besoin */
+            transform: translateY(-50%);
+            color: white;     /* Texte blanc */
+            font-size: 1.1em;   /* Taille du texte, ajuste selon ton besoin */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000; /* Optionnel : halo noir pour lisibilité */
+            z-index: 1;       /* Place le texte au-dessus de l'image */
+        }
+
+        /* PARTIE AJOUTÉE : Styles pour les deux sections en dessous */
+        .row-sections { /* Conteneur flex pour les deux sections */
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            box-sizing: border-box;
+            padding: 30px 15px;
+        }
+        .section-orange {
+            background: orange;
+            color: white;
+        }
+        .section-sand {
+            background: #f5deb3; /* sable */
+            color: #333;
+            nin-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        .container-trois-colonnes {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+      max-width: 900px;    /* ← limite la largeur totale des colonnes */
+    margin: 0 auto;      /* ← centre le conteneur horizontalement */
+    padding: 0 40px;     /* ← ajoute de l’espace à gauche et à droite */
+    justify-content: space-evenly;
+
+}
+.colonne {
+    flex: 1;
+    /* Pas de background, pas de bordure, pas d’ombre */
+    color: #300101;
+    padding: 10px;
+    font-size: 1.3em;
+    text-align: justify;
+    font-family: "Century Gothic";
+}
+.colonne {
+  flex: 1;
+  /* Pas de background, pas de bordure, pas d’ombre */
+  color: #300101;
+  padding: 10px;
+  font-size: 1.3em;
+  text-align: justify;
+}
+.colonne:nth-child(1) {
+  font-size: 38px; 
+}
+.colonne:nth-child(3) {
+  font-size: 38px; /* Colonnes extérieures */
+}
+
+.colonne:nth-child(2) {
+  font-size: 90px; /* Colonne centrale */
+}
