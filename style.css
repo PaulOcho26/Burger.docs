@@ -101,3 +101,31 @@
 .colonne:nth-child(2) {
   font-size: 90px; /* Colonne centrale */
 }
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0 20px 0;
+}
+
+.social-icon {
+  color: #333;
+  font-size: 2.2em;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ff7300; /* Couleur au survol */
+  transform: scale(1.2);
+}
+
+/* Responsive : réduire la taille sur petits écrans */
+@media (max-width: 600px) {
+  .social-footer {
+    gap: 18px;
+  }
+  .social-icon {
+    font-size: 1.5em;
+  }
+}
